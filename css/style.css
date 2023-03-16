@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.cnt{
+    width: 60%;
+    margin: auto;
+}
+
+.img-logo{
+    height: 200px;
+}
+
+input{
+    margin-right: 20px;
+}
+
+input, button{
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.todo-cnt{
+    background-color: lightskyblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+li{
+    list-style: none;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+span{
+    flex-grow: 1;
+}
+

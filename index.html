@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div id="app">
+
+    <header class="cnt">
+        <div class="img-logo text-center">
+            <img src="https://bebeez.it/wp-content/uploads/2021/07/boolean-e1626086189994.png" alt="Logo Boolean"/>
+        </div>
+    </header>
+
+    <main class="cnt">
+        
+        <div class="text-center">
+            <input type="text" placeholder="Inserisci cose da fare">
+            <button>Inserisci</button>
+        </div>
+
+        <div class="todo-cnt">
+            <ul>
+                <li v-for="text in toDoList">
+                    <span>{{text.text}}</span> 
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
+            </ul>
+        </div>
+            
+        
+    </main>
+    
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script style="text/javascript" src="js/main.js"></script>
+</body>
+</html>
