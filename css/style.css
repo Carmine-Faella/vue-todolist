@@ -39,7 +39,11 @@ li{
     display: flex;
 }
 
-span{
+.todo-cnt span{
     flex-grow: 1;
+}
+
+.line{
+    text-decoration: line-through;
 }
 

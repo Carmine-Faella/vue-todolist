@@ -26,12 +26,13 @@
         </div>
 
         <div class="todo-cnt">
-            <ul>
-                <li v-for="text in toDoList">
-                    <span>{{text.text}}</span> 
-                    <i class="fa-solid fa-xmark"></i>
+            <ul v-if="toDoList.length > 0">
+                <li v-for="(text,index) in toDoList">
+                    <span :class="text.done == true?'line':''">{{text.text}}</span> 
+                    <i class="fa-solid fa-xmark" @click="remove(index)"></i>
                 </li>
             </ul>
+            <h2 v-else>Finito Tutto!!</h2>
         </div>
             
         
