@@ -12,6 +12,7 @@
 
 <div id="app">
 
+    <!--Logo e header-->
     <header class="cnt">
         <div class="img-logo text-center">
             <img src="https://bebeez.it/wp-content/uploads/2021/07/boolean-e1626086189994.png" alt="Logo Boolean"/>
@@ -19,15 +20,16 @@
     </header>
 
     <main class="cnt">
-        
+        <!--Inserire il Todo-->
         <div class="text-center">
-            <input type="text" placeholder="Inserisci cose da fare">
-            <button>Inserisci</button>
+            <input type="text" placeholder="Inserisci cose da fare" v-model="newdo" @keyup.enter="add">
+            <button @click="add">Aggiungi</button>
         </div>
 
+        <!--Lista del Todo-->
         <div class="todo-cnt">
             <ul v-if="toDoList.length > 0">
-                <li v-for="(text,index) in toDoList">
+                <li v-for="(text,index) in toDoList" @click="checkDo(index)">
                     <span :class="text.done == true?'line':''">{{text.text}}</span> 
                     <i class="fa-solid fa-xmark" @click="remove(index)"></i>
                 </li>

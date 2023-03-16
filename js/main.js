@@ -23,7 +23,24 @@ const { createApp } = Vue
     methods: {
         remove(index){
             this.toDoList.splice(index, 1)
+        },
+        add(){
+            const newText = {
+                text:this.newdo,
+                done:false
+            };
+
+            this.toDoList.unshift(newText);
+            this.newdo=''
+        },
+        checkDo(index){
+            if(this.toDoList[index].done == true){
+                this.toDoList[index].done = false;
+                console.log(this.toDoList[index].done)
+            }else{
+                this.toDoList[index].done = true
+            }
         }
-      }
+    }
   }
 ).mount('#app')
