@@ -17,7 +17,8 @@ const { createApp } = Vue
                 text:'Studiare',
                 done:false
             }
-        ]
+        ],
+        error:false
       }
     },
     methods: {
@@ -30,7 +31,12 @@ const { createApp } = Vue
                 done:false
             };
 
-            this.toDoList.unshift(newText);
+            if(newText['text'].length >= 5){
+                this.toDoList.unshift(newText);
+                this.error = false;
+            }else{
+                this.error = true;
+            }
             this.newdo=''
         },
         checkDo(index){

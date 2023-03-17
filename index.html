@@ -25,6 +25,7 @@
             <input type="text" placeholder="Inserisci cose da fare" v-model="newdo" @keyup.enter="add">
             <button @click="add">Aggiungi</button>
         </div>
+        <div class="text-center error" v-show="error">Devi inserire almeno 5 caratteri</div>
 
         <!--Lista del Todo-->
         <div class="todo-cnt">
